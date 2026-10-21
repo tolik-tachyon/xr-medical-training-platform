@@ -1,6 +1,6 @@
 # AR/VR Application for Professional Training of Medical Specialists
 
-An extensible AR/VR platform for training medical specialists in clinical procedures, with automated performance assessment. The first prototype implements two complete procedure: cardiopulmonary resuscitation (CPR) and taking blood.
+An extensible AR/VR platform for training medical specialists in clinical procedures, with automated performance assessment. The first prototype implements two complete procedures: cardiopulmonary resuscitation (CPR) and blood draw.
 
 > Diploma project, Astana IT University, 2026.
 
@@ -14,29 +14,37 @@ Practical training of medical specialists depends on mannequins, simulation cent
 - **Instructors:** teachers and clinical trainers who assign scenarios and review results.
 - **Administrators:** staff of educational institutions or simulation centers who manage users and scenarios.
 
+Instructor and administrator functions are planned for the next stage of the project.
+
 ## Expected outcomes
 
 - Requirements specification with verifiable acceptance criteria
 - Architecture description and diagrams
 - UX mockups of key scenarios
-- Working prototype with two complete procedure (CPR, Taking Blood)
-- Performance assessment mechanism with objective results
-- Verification report against defined metrics
+- Working prototype with two complete procedures (CPR and blood draw)
+- Performance assessment mechanism with objective results for each session
+- Verification report against defined metrics, including evidence that the platform can be extended with a new procedure without changing its core
 
 ## Team and supervision
 
 | Role | Name | Responsibilities |
 |---|---|---|
-| Student | Anatoliy Tsoy | Development and documenation |
+| Student | Anatoliy Tsoy | Development and documentation |
 | Supervisor | Akerke Akanova | Project guidance and review of key deliverables |
 
 ## Project scope
 
-**In scope**
+**In scope (current stage, prototype)**
+- Core platform: procedure selection, scenario execution, and results review for a session
 - Procedure module with a defined scenario structure (steps, conditions, scoring rules)
-- Two fully implemented procedure: CPR, Taking blood
-- Basic instructor view for reviewing trainee results
-- Verification of the prototype against the defined requirements and metrics.
+- Two fully implemented procedures: CPR and blood draw
+- Collection of performance data during a session
+- Verification of the prototype against the defined requirements and metrics
+
+**Planned for the next stage (pre-defense 2)**
+- User roles (trainee, instructor, administrator)
+- Persistent storage of results and progress tracking
+- Instructor view for reviewing trainee results
 
 **Out of scope (future work)**
 - Additional procedures (e.g. patient examination, surgical procedures)
@@ -62,8 +70,8 @@ Practical training of medical specialists depends on mannequins, simulation cent
 
 | Area | Choice |
 |---|---|
-| AR/VR engine and XR framework | Unity and XR framework in consideration |
-| Target devices | VR helmet |
+| AR/VR engine and XR framework | Unity; XR framework in consideration |
+| Target devices | VR headset (model in consideration) |
 | Server platform | In consideration |
 | Data storage | In consideration |
 | Component interaction | In consideration |
@@ -78,8 +86,8 @@ Practical training of medical specialists depends on mannequins, simulation cent
 
 ```
 .
-├── docs/        # Documentation and pre-defense materials
-├── protoype/
+├── docs/         # Documentation and pre-defense materials
+├── prototype/    # Unity project
 ├── .gitignore
 └── README.md
 ```
