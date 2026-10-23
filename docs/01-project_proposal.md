@@ -1,3 +1,17 @@
+# Project Proposal: Development of an AR/VR Application for Professional Training of Medical Specialists
+
+## Project Title
+
+Development of an AR/VR Application for Professional Training of Medical Specialists
+
+## Team
+
+Anatoliy Tsoy
+
+## Supervisor
+
+Akerke Akanova
+
 # 1. Project proposal
 
 ## 1.1 Problem statement
