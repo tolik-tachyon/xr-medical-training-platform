@@ -19,7 +19,8 @@
 |---|---|---|
 | Project proposal | XMT-2 | commit `XMT-2: add project proposal content` |
 | Project management and risks | XMT-16 | branch `XMT-16-Project-Management-And-Risks` |
-| *(add more rows as tasks are completed)* | XMT-__ | *(branch / PR link)* |
+| README | XMT-15 | commit `XMT-15: prepare README` |
+| Git repository setup | XMT-4 | commit `XMT-4: set up repository structure` |
 
 ## 10.2 YouTrack project
 
@@ -69,24 +70,25 @@
 
 ## 10.6 Dependencies
 
-| ID | Task / deliverable | Depends on | Type | YouTrack |
-|---|---|---|---|---|
-| D1 | Requirements specification | Evidence of relevance (interviews), Literature review | Finish-to-Start | XMT-3, XMT-5 |
-| D2 | Architecture and diagrams | Requirements specification, Technology comparison | Finish-to-Start | XMT-6, XMT-9 |
-| D3 | UX mockups | Requirements specification | Finish-to-Start | XMT-11 |
-| D4 | Verification and evaluation plan | Requirements specification, metrics, reference values from clinical guidelines | Finish-to-Start | XMT-__ |
-| D5 | Prototype (CPR and blood draw) | Technology comparison, Architecture | Finish-to-Start | XMT-7, XMT-11 |
-| D6 | Second procedure | Architecture and procedure module design | Finish-to-Start | XMT-11 |
-| D7 | Supervisor feedback | Availability of draft deliverables | Finish-to-Start | XMT-13 |
-| D8 | Procedure validation | Access to a medical expert (external) | External | XMT- Not created yet |
-| D9 | Prototype testing on device | Access to a VR headset (external) | External | XMT- Not created yet |
+| ID | Task / deliverable | Depends on | Type | YouTrack (task) | YouTrack (depends on) |
+|---|---|---|---|---|---|
+| D1 | Requirements specification | Evidence of relevance, Literature review, Existing systems comparison | Finish-to-Start | XMT-8 | XMT-3, XMT-5, XMT-6 |
+| D2 | Architecture and diagrams | Requirements specification, Technology comparison | Finish-to-Start | XMT-9, XMT-10 | XMT-8, XMT-7 |
+| D3 | UX mockups | Requirements specification | Finish-to-Start | XMT-11 | XMT-8 |
+| D4 | Verification and evaluation plan | Requirements specification, metrics, reference values from clinical guidelines | Finish-to-Start | XMT-12 | XMT-8 |
+| D5 | Prototype (CPR and blood draw) | Technology comparison, Architecture, UX mockups | Finish-to-Start | XMT-17 | XMT-7, XMT-9, XMT-11 |
+| D6 | Second procedure | Architecture and procedure module design, Prototype | Finish-to-Start | XMT-18 | XMT-9, XMT-17 |
+| D7 | Supervisor feedback | Availability of draft deliverables | Finish-to-Start | XMT-13 | XMT-8, XMT-9, XMT-11, XMT-12 |
 
-**Link between dependencies and risks:** D8 is affected by R1, R3 and R10; D9 by R2, R4 and R7; D5 and D6 by R6.
+**Link between dependencies and risks:** D4 is affected by R5; D5 and D6 by R6; D8 by R1, R3 and R10; D9 by R2, R4 and R7.
+
+The final submission check (XMT-14) depends on all deliverables above.
 
 ## 10.7 Next steps
 
 * Select the target headset and build a minimal scene on it (closes R2, R4, R7).
 * Complete the architecture and procedure module design, then add further procedures through the procedure module without changes to the core (D2, D6, R6).
+* Define scoring rules for the procedures based on clinical guideline values (D4, R5).
 * Implement a backend with a database to store trainee results (R8).
 * Implement user roles and the instructor view so that instructors can review trainee results.
-* Schedule validation of the procedures with a medical expert (R1, R3, R10).
+* Schedule validation of the procedures with a medical expert (D8, R1, R3, R10).
