@@ -56,7 +56,43 @@ A mockup of the instructor screen listing trainee sessions with score, time and 
 
 <mockup: S6 Instructor view (P2)>
 
-## 8.3 Screen inventory
+## 8.3 CPR procedure flow (activity diagram)
+
+The diagram shows the flow of the CPR procedure from the trainee's point of view, including the error case: a wrong or out-of-order action is rejected, feedback is shown, and the same step stays active until the trainee corrects it (FR-3, FR-4). The step list follows the CPR procedure definition (Section 7.5) and the guideline reference [35]. The sequence of component calls is shown in Section 7.6.
+
+```mermaid
+flowchart TD
+  Start([Start: trainee selects CPR]) --> Load[System loads CPR definition and scene]
+  Load --> Step[Show instruction for current step]
+  Step --> Act[Trainee performs action]
+  Act --> Check{Action correct<br/>and in order?}
+  Check -- No --> Err[Show error feedback<br/>record step as incorrect]
+  Err --> Step
+  Check -- Yes --> Ok[Show confirmation feedback<br/>record time and result]
+  Ok --> Comp{Compression step?}
+  Comp -- Yes --> Metrics[Measure compression rate and count<br/>show current values]
+  Metrics --> More
+  Comp -- No --> More{More steps?}
+  More -- Yes --> Next[Activate next step]
+  Next --> Step
+  More -- No --> Score[Apply scoring rules]
+  Score --> Summary[Show results summary:<br/>time, steps, score, rate, count]
+  Summary --> Choice{Trainee choice}
+  Choice -- Repeat --> Load
+  Choice -- Menu --> End([Return to main menu])
+```
+
+Steps of the CPR procedure (to be aligned with the definition file):
+
+| Step | Instruction | Condition |
+|------|-------------|-----------|
+| S1 | Check responsiveness | Action: check_response |
+| S2 | <next step, for example: call for help / activate emergency response> | <action> |
+| S3 | <next step, for example: check breathing> | <action> |
+| S4 | Perform chest compressions | Metric: rate and count within reference range |
+| S5 | <optional: use the AED, if included in the prototype> | <action> |
+
+## 8.4 Screen inventory
 
 | Screen | Use case | Requirements | Status |
 |--------|----------|--------------|--------|
@@ -67,7 +103,7 @@ A mockup of the instructor screen listing trainee sessions with score, time and 
 | S5 Repeat / menu | UC-5 | FR-12 | <implemented / mockup> |
 | S6 Instructor view | UC-7 | FR-14, FR-15 | Mockup, P2 |
 
-## 8.4 Interaction table
+## 8.5 Interaction table
 
 | User action | Input | System response | Requirement |
 |-------------|-------|-----------------|-------------|
@@ -77,7 +113,7 @@ A mockup of the instructor screen listing trainee sessions with score, time and 
 | Finish the procedure | Last step completed | Shows the results summary | FR-10 |
 | Repeat or return | Controller ray and trigger | Restarts the procedure or opens the menu | FR-12 |
 
-## 8.5 Limitations of the prototype
+## 8.6 Limitations of the prototype
 
 - Screens marked as mockup are not yet implemented in Unity.
 - Interaction was tested in the XR Device Simulator; testing on a physical headset depends on getting access to one (Section 9).
