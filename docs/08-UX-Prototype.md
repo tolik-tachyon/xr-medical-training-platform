@@ -2,7 +2,7 @@
 
 Project: Development of an AR/VR Application for Professional Training of Medical Specialists
 
-This section shows how users interact with the application in the key scenarios of the prototype (P1). The scenarios follow the use cases of Section 7 (UC-1 to UC-5). Each screen is marked as implemented in the Unity prototype or as a mockup.
+This section shows how users interact with the application in the key scenarios of the prototype (P1). The scenarios follow the use cases of Section 7 (UC-1 to UC-5). Each screen is marked as implemented in the Unity prototype or as a mockup. All screens below are mockups; numbers on them (time, score, rate, count) are illustrative.
 
 ## 8.1 Interaction model
 
@@ -24,7 +24,9 @@ This section shows how users interact with the application in the key scenarios 
 2. The trainee points the controller ray at a procedure and presses the trigger.
 3. The training scene for the selected procedure loads.
 
-<screenshot or mockup: S1 Main menu>
+![S1 Main menu](img/S1_main_menu.png)
+
+*Fig. 8.1. S1: main menu (mockup).*
 
 ### Scenario 2: Perform a procedure with step guidance (UC-2, UC-3)
 
@@ -35,26 +37,37 @@ This section shows how users interact with the application in the key scenarios 
 5. If the action is wrong or out of order, the feedback panel shows the error, and the step stays active until the trainee corrects it.
 6. In the CPR procedure, the current compression rate and count are shown during the compression step.
 
-<screenshot or mockup: S2 Training scene with instruction panel>
-<screenshot or mockup: S3 Correct and incorrect feedback>
+![S2 Training scene with instruction panel](img/S2_training_scene.png)
+
+*Fig. 8.2. S2: training scene with the instruction panel and CPR metrics (mockup).*
+
+![S3 Correct and incorrect feedback](img/S3_feedback.png)
+
+*Fig. 8.3. S3: correct and incorrect feedback (mockup).*
 
 ### Scenario 3: View the results summary (UC-4)
 
 After the last step the summary screen shows: total time, number of completed, missed and incorrect steps, score, and for CPR the compression rate and count (FR-10).
 
-<screenshot or mockup: S4 Results summary>
+![S4 Results summary](img/S4_results_summary.png)
+
+*Fig. 8.4. S4: results summary (mockup, illustrative data).*
 
 ### Scenario 4: Repeat or return to the menu (UC-5)
 
 From the summary screen the trainee chooses "Repeat" to restart the same procedure or "Menu" to return to the procedure list (FR-12).
 
-<screenshot or mockup: S5 Repeat / menu buttons on the summary screen>
+![S5 Repeat / menu buttons](img/S5_repeat_menu.png)
+
+*Fig. 8.5. S5: repeat / menu buttons at the end of a session (mockup).*
 
 ### Planned (P2): Instructor view (UC-7)
 
 A mockup of the instructor screen listing trainee sessions with score, time and errors per step. This screen is a mockup only and is not implemented in P1.
 
-<mockup: S6 Instructor view (P2)>
+![S6 Instructor view (P2)](img/S6_instructor_view_P2.png)
+
+*Fig. 8.6. S6: instructor view (mockup, planned for P2, illustrative data).*
 
 ## 8.3 CPR procedure flow (activity diagram)
 
@@ -82,25 +95,25 @@ flowchart TD
   Choice -- Menu --> End([Return to main menu])
 ```
 
-Steps of the CPR procedure (to be aligned with the definition file):
+Steps of the CPR procedure (example wording used in the mockups; to be aligned with the definition file):
 
 | Step | Instruction | Condition |
 |------|-------------|-----------|
 | S1 | Check responsiveness | Action: check_response |
-| S2 | <next step, for example: call for help / activate emergency response> | <action> |
-| S3 | <next step, for example: check breathing> | <action> |
+| S2 | Call for help | Action: call_help |
+| S3 | Check breathing | Action: check_breathing |
 | S4 | Perform chest compressions | Metric: rate and count within reference range |
-| S5 | <optional: use the AED, if included in the prototype> | <action> |
+| S5 | Use the AED (optional, if included in the prototype) | Action: use_aed |
 
 ## 8.4 Screen inventory
 
 | Screen | Use case | Requirements | Status |
 |--------|----------|--------------|--------|
-| S1 Main menu | UC-1 | FR-1 | <implemented / mockup> |
-| S2 Training scene with instruction panel | UC-2 | FR-2, FR-3 | <implemented / mockup> |
-| S3 Feedback panel | UC-3 | FR-4 | <implemented / mockup> |
-| S4 Results summary | UC-4 | FR-9, FR-10 | <implemented / mockup> |
-| S5 Repeat / menu | UC-5 | FR-12 | <implemented / mockup> |
+| S1 Main menu | UC-1 | FR-1 | Mockup |
+| S2 Training scene with instruction panel | UC-2 | FR-2, FR-3 | Mockup |
+| S3 Feedback panel | UC-3 | FR-4 | Mockup |
+| S4 Results summary | UC-4 | FR-9, FR-10 | Mockup |
+| S5 Repeat / menu | UC-5 | FR-12 | Mockup |
 | S6 Instructor view | UC-7 | FR-14, FR-15 | Mockup, P2 |
 
 ## 8.5 Interaction table
