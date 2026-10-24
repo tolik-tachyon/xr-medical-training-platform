@@ -57,13 +57,13 @@ Instructor and administrator functions are planned for the next stage of the pro
 **Stage:** Pre-defense 1 (planning and design)
 
 - [x] Project proposal
-- [ ] Evidence of relevance
-- [ ] Literature review
-- [ ] Existing system and technology comparison
-- [ ] Requirements specification
-- [ ] Architecture and diagrams
-- [ ] UX mockups
-- [ ] Verification and evaluation plan
+- [x] Evidence of relevance
+- [x] Literature review
+- [x] Existing system and technology comparison
+- [x] Requirements specification
+- [x] Architecture and diagrams
+- [x] UX mockups
+- [x] Verification and evaluation plan
 - [ ] Prototype implementation
 
 ## Selected technologies
@@ -87,7 +87,7 @@ Instructor and administrator functions are planned for the next stage of the pro
 ```
 .
 ├── docs/         # Documentation and pre-defense materials
-├── prototype/    # Unity project
+├── prototype/    # Unity project(Not done)
 ├── .gitignore
 └── README.md
 ```
