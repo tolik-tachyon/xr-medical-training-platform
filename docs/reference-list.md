@@ -34,3 +34,4 @@
 32. Training Industry. *Fundamental Surgery launches HomeVR* (press release, 1 April 2020). https://trainingindustry.com/press-release/compliance/fundamental-surgery-launches-homevr/
 33. XR Today. *FundamentalVR review: immersive surgical training meets haptic glove technology*. https://www.xrtoday.com/?p=38975
 34. HealthySimulation.com. *Fundamental Surgery*. https://www.healthysimulation.com/?p=87660
+35. Kleinman, M. E., Buick, J. E., Huber, N., Idris, A. H., Levy, M., Morgan, S. G., Nassal, M. M. J., Neth, M. R., Norii, T., Nunnally, M. E., Rodriguez, A. J., Walsh, B. K., & Drennan, I. R. (2025). Part 7: Adult Basic Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation, 152(16_suppl_2), S448–S478. https://doi.org/10.1161/CIR.0000000000001369
